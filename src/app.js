@@ -5,13 +5,13 @@ import { createWeekdayAccessMiddleware } from './middleware/weekday-access.js';
 import { createGamesRouter } from './routes/games.js';
 import { createRequestLogsRouter } from './routes/request-logs.js';
 
-export function createApp({ clock = () => new Date() } = {}) {
+export function createApp() {
   const app = express();
   const games = createGamesStore();
   const requestLogs = [];
 
-  app.use(createRequestLogger(requestLogs, { clock }));
-  app.use(createWeekdayAccessMiddleware({ clock }));
+  app.use(createRequestLogger(requestLogs));
+  app.use(createWeekdayAccessMiddleware());
   app.use(express.json());
 
   app.use('/jogos', createGamesRouter(games));

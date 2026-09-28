@@ -1,8 +1,8 @@
-import { isWeekday } from '../core/request-logs.js';
+import { isWeekday } from '../utils/request-logs.js';
 
-export function createWeekdayAccessMiddleware({ clock = () => new Date() } = {}) {
+export function createWeekdayAccessMiddleware() {
   return (req, res, next) => {
-    if (!isWeekday(clock())) {
+    if (!isWeekday()) {
       return res.status(403).json({
         erro: 'A API só está disponível de segunda a sexta-feira.',
       });

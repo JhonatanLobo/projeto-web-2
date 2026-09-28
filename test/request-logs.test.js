@@ -5,7 +5,7 @@ import {
   formatFortalezaTimestamp,
   isValidDateParam,
   isWeekday,
-} from '../src/core/request-logs.js';
+} from '../src/utils/request-logs.js';
 
 test('formats request timestamps with Fortaleza local time and offset', () => {
   assert.equal(
