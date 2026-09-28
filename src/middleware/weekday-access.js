@@ -1,4 +1,4 @@
-import { isWeekday } from '../utils/request-logs.js';
+import { isWeekday } from '../utils/date-utils.js';
 
 export function createWeekdayAccessMiddleware() {
   return (req, res, next) => {

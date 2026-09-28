@@ -1,4 +1,4 @@
-import { formatFortalezaTimestamp } from '../utils/request-logs.js';
+import { formatFortalezaTimestamp } from '../utils/date-utils.js';
 
 export function createRequestLogger(logs) {
   return (req, res, next) => {

@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { filterLogsByDate, isValidDateParam } from '../utils/request-logs.js';
+import { filterLogsByDate, isValidDateParam } from '../utils/date-utils.js';
 
 export function createRequestLogsRouter(logs) {
   const router = Router();
