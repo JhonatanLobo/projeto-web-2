@@ -1,7 +1,9 @@
 export const TIME_ZONE = 'America/Fortaleza';
 
-const localDateTimeFormatter = new Intl.DateTimeFormat('en-CA', {
+const localDateTimeFormatter = new Intl.DateTimeFormat('en-US', {
   timeZone: TIME_ZONE,
+  calendar: 'gregory',
+  numberingSystem: 'latn',
   year: 'numeric',
   month: '2-digit',
   day: '2-digit',
